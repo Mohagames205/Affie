@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/json" src="pictures.json"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    </head>
+    <body>
+        <div class="underbody">
+        <div class="container">
+            <h1 id="gaytext">Affie</h1>
+            <p id="um">Gelukkige verjaardag 🎉 :), hier staan een aantal leuke fotootjes.</p><br>
+            <button class="primary-button" id="gayifybutton" onclick="gayify()">Smexier</button>
+        </div>
+
+        <div class="photos" id="photos">
+            <script>
+                init();
+            </script>
+        </div>
+        
+        <div class="end">
+            <p>Deze website werd vol 💞 gemaakt door <a href="https://mohamedelyousfi.be">Mohamed</a> voor Affie</p>
+        </div>
+    </div>
+    </body>
+
+    <script>
+        function gayify()
+        {
+            var gaytext = document.getElementById("gaytext");
+            var gayifybutton = document.querySelector("#gayifybutton");
+            var umoeder = document.querySelector("#um");
+            var img = document.querySelector("#img");
+
+            if(gaytext.classList != "rainbow")
+            {
+                
+                img.src = "assets/smexyaffie.jpg";
+                gaytext.classList = "rainbow";
+                gayifybutton.textContent = "Maak normaal";
+
+
+                var typewriter = new Typewriter(umoeder, {
+                strings: [
+                    "\"Ik had seks in een tent\" - Iemand",
+                    "Een zeer poetisch en creatief persoon",
+                    "Soms gay en soms niet",
+                    "Nee! Wacht op me alsjeblieft... (Affie opt einde van de les)",
+                    "\"looks like vagina fingering shit, die vinger payment shit\" - Een anoniem persoon",
+                    "\"Ik heb eigenlijk nooit naar jouw kont gekeken.\" - Persoon met een obsessie aan konten",
+                    "Affie, ik hou toch wel een beetje van je",
+                ],
+                loop: true,
+                delay: 80,
+                autoStart: true,
+                });
+
+            }
+            else {
+                img.src = "assets/gwp.jpg";
+                
+                gaytext.classList = "";
+                gayifybutton.textContent = "Maak sexy";
+                umoeder.textContent = "Gelukkige verjaardag 🎉 :)";
+            }   
+        }
+    
+    </script>
+</html>
