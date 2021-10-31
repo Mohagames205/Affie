@@ -48,4 +48,5 @@ USER www
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
+EXPOSE 6969
 CMD ["php-fpm"]
